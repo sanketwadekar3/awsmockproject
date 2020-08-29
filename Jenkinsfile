@@ -16,7 +16,7 @@ pipeline {
         stage('Check out SCM') {
             steps {
                 echo "checkingout"
-                //checkout scm
+                checkout scm
             }
         }
         stage('terraform_environment') {
