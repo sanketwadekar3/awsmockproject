@@ -33,5 +33,15 @@ pipeline {
 
             }
         }
+        stage('build') {
+            steps {
+                sh '''
+                    terraform init
+                    terraform plan
+                    //terraform apply
+                    terraform validate
+                    '''
+            }
+        }
 }
 }
