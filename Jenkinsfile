@@ -36,10 +36,7 @@ pipeline {
         stage('build') {
             steps {
                 sh '''
-                    terraform init
-                    terraform plan
-                    terraform validate
-                    terraform apply -auto-approve
+                    terraform destroy
                     '''
             }
         }
