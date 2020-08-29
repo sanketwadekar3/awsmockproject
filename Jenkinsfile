@@ -10,7 +10,7 @@ pipeline {
         stage('cleanup') {
             steps {
                 echo "cleaning up"
-                cleanWs()
+                //cleanWs()
             }
         }
         stage('Check out SCM') {
@@ -37,8 +37,9 @@ pipeline {
             steps {
                 sh '''
                     terraform init
-                    terraform plan
-                    terraform apply -auto-approve                    
+                    //terraform plan
+                    //terraform apply -auto-approve  
+                    terraform destroy -auto-approve
                     '''
             }
         }
