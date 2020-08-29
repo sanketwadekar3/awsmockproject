@@ -38,7 +38,6 @@ pipeline {
                 sh '''
                     terraform init
                     terraform plan
-                    //terraform apply
                     terraform validate
                     '''
             }
