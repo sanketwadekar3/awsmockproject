@@ -10,7 +10,7 @@ pipeline {
         stage('cleanup') {
             steps {
                 echo "cleaning up"
-                //cleanWs()
+                cleanWs()
             }
         }
         stage('Check out SCM') {
