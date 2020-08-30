@@ -1,0 +1,1 @@
+mysql -h aws-mock-db.cluster-csaruqlxxway.us-east-1.rds.amazonaws.com -P 3306 -u admin -p terra < db.sql 
