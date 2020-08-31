@@ -404,7 +404,6 @@ module "api_gateway" {
 
   source = "../modules/api_gateway"
   api_name = var.api_name
- // cognito_user_pool_name =  module.krackit11_cognito_pool.poolid
   provider_arns = module.krackit11_cognito_pool.poolarn
   depends_on = [module.krackit11_cognito_pool]
 }
