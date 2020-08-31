@@ -607,7 +607,7 @@ module "krackit11_cognito_pool_client" {
   read_attributes               = var.read_attributes
   refresh_token_validity        = var.refresh_token_validity
   write_attributes              = var.write_attributes
-  callback_urls                 = "https://9asde9idyb.execute-api.us-east-1.amazonaws.com/v1"
+  callback_urls                 = ["https://9asde9idyb.execute-api.us-east-1.amazonaws.com/v1"]
   depends_on = [module.krackit11_cognito_pool]
 
 }
