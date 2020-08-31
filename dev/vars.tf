@@ -154,7 +154,7 @@ variable "require_numbers" {
 variable "require_uppercase" {
     default = true
 }
-variable "tag_name" {
+variable "tag_name1" {
     default = "krackit11"
 }
 variable "Environment" {
