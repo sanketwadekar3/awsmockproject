@@ -187,7 +187,7 @@ module "pre_signup_lambda_function" {
   handler = "lambda.handler"
   subnet1 = module.subnets.subnet[var.tag_name[4]]
   securitygroup = module.private_rds_sg2.sg_id
-  //dirname = 
+  depends_on = [module.private_rds_sg2, module.subnets] 
 }
 module "post_confirmation_lambda_function" {
   source = "../modules/lambda"
@@ -198,7 +198,7 @@ module "post_confirmation_lambda_function" {
   handler = "lambda_function.lambda_handler"
   subnet1 = module.subnets.subnet[var.tag_name[4]]
   securitygroup = module.private_rds_sg2.sg_id
-  
+  depends_on = [module.private_rds_sg2, module.subnets]
 }
 
 #_____________________________________________________________________________________
@@ -213,7 +213,7 @@ module "getmatchlist" {
   handler = "lambda_function.lambda_handler"
   subnet1 = module.subnets.subnet[var.tag_name[4]]
   securitygroup = module.private_rds_sg2.sg_id
-  //dirname = 
+  depends_on = [module.private_rds_sg2, module.subnets] 
 }
 #_____________________________________________________________________________________
 # contest list lambda
@@ -227,7 +227,7 @@ module "getcontestlist" {
   handler = "lambda_function.lambda_handler"
   subnet1 = module.subnets.subnet[var.tag_name[4]]
   securitygroup = module.private_rds_sg2.sg_id
-  //dirname = 
+  depends_on = [module.private_rds_sg2, module.subnets] 
 }
 #_____________________________________________________________________________________
 # add cash lambda
@@ -241,7 +241,7 @@ module "add_cash" {
   handler = "lambda_function.lambda_handler"
   subnet1 = module.subnets.subnet[var.tag_name[4]]
   securitygroup = module.private_rds_sg2.sg_id
-  //dirname = 
+  depends_on = [module.private_rds_sg2, module.subnets] 
 }
 #_____________________________________________________________________________________
 # enter contest lambda
@@ -255,7 +255,7 @@ module "enter_contest" {
   handler = "lambda_function.lambda_handler"
   subnet1 = module.subnets.subnet[var.tag_name[4]]
   securitygroup = module.private_rds_sg2.sg_id
-  //dirname = 
+  depends_on = [module.private_rds_sg2, module.subnets] 
 }
 #_____________________________________________________________________________________
 # my team lambda
@@ -269,7 +269,7 @@ module "my_team" {
   handler = "lambda_function.lambda_handler"
   subnet1 = module.subnets.subnet[var.tag_name[4]]
   securitygroup = module.private_rds_sg2.sg_id
-  //dirname = 
+  depends_on = [module.private_rds_sg2, module.subnets]
 }
 #_____________________________________________________________________________________
 #player info lambda
@@ -283,7 +283,7 @@ module "player_info" {
   handler = "lambda_function.lambda_handler"
   subnet1 = module.subnets.subnet[var.tag_name[4]]
   securitygroup = module.private_rds_sg2.sg_id
-  //dirname = 
+  depends_on = [module.private_rds_sg2, module.subnets] 
 }
 #_____________________________________________________________________________________
 #player info lambda
@@ -297,7 +297,7 @@ module "create_team" {
   handler = "lambda_function.lambda_handler"
   subnet1 = module.subnets.subnet[var.tag_name[4]]
   securitygroup = module.private_rds_sg2.sg_id
-  //dirname = 
+  depends_on = [module.private_rds_sg2, module.subnets] 
 }
 #_____________________________________________________________________________________
 #player info lambda
@@ -311,7 +311,7 @@ module "leaderboard" {
   handler = "lambda_function.lambda_handler"
   subnet1 = module.subnets.subnet[var.tag_name[4]]
   securitygroup = module.private_rds_sg2.sg_id
-  //dirname = 
+  depends_on = [module.private_rds_sg2, module.subnets]
 }
 #_____________________________________________________________________________________
 #player info lambda
@@ -325,7 +325,7 @@ module "my_contest" {
   handler = "lambda_function.lambda_handler"
   subnet1 = module.subnets.subnet[var.tag_name[4]]
   securitygroup = module.private_rds_sg2.sg_id
-  //dirname = 
+  depends_on = [module.private_rds_sg2, module.subnets]
 }
 #_____________________________________________________________________________________
 #player info lambda
@@ -339,7 +339,7 @@ module "players_list" {
   handler = "lambda_function.lambda_handler"
   subnet1 = module.subnets.subnet[var.tag_name[4]]
   securitygroup = module.private_rds_sg2.sg_id
-  //dirname = 
+  depends_on = [module.private_rds_sg2, module.subnets]
 }
 #_____________________________________________________________________________________
 #player info lambda
@@ -353,7 +353,7 @@ module "wallet_info" {
   handler = "lambda_function.lambda_handler"
   subnet1 = module.subnets.subnet[var.tag_name[4]]
   securitygroup = module.private_rds_sg2.sg_id
-  //dirname = 
+  depends_on = [module.private_rds_sg2, module.subnets] 
 }
 #_____________________________________________________________________________________
 #player info lambda
@@ -367,7 +367,7 @@ module "withdraw_cash" {
   handler = "lambda_function.lambda_handler"
   subnet1 = module.subnets.subnet[var.tag_name[4]]
   securitygroup = module.private_rds_sg2.sg_id
-  //dirname = 
+  depends_on = [module.private_rds_sg2, module.subnets]
 }
 
 module "krackit11_cognito_pool" {
