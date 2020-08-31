@@ -185,6 +185,8 @@ module "pre_signup_lambda_function" {
   outputfilepath = var.filepath[0]
   runtime = var.runtime_name[0]
   handler = "lambda.handler"
+  subnet1 = module.subnets.subnet[var.tag_name[4]]
+  securitygroup = module.private_rds_sg2.sg_id
   //dirname = 
 }
 module "post_confirmation_lambda_function" {
@@ -194,6 +196,8 @@ module "post_confirmation_lambda_function" {
   outputfilepath = var.filepath[1]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  subnet1 = module.subnets.subnet[var.tag_name[4]]
+  securitygroup = module.private_rds_sg2.sg_id
   
 }
 
@@ -207,6 +211,8 @@ module "getmatchlist" {
   outputfilepath = var.filepath[2]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  subnet1 = module.subnets.subnet[var.tag_name[4]]
+  securitygroup = module.private_rds_sg2.sg_id
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -219,6 +225,8 @@ module "getcontestlist" {
   outputfilepath = var.filepath[3]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  subnet1 = module.subnets.subnet[var.tag_name[4]]
+  securitygroup = module.private_rds_sg2.sg_id
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -231,6 +239,8 @@ module "add_cash" {
   outputfilepath = var.filepath[4]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  subnet1 = module.subnets.subnet[var.tag_name[4]]
+  securitygroup = module.private_rds_sg2.sg_id
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -243,6 +253,8 @@ module "enter_contest" {
   outputfilepath = var.filepath[5]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  subnet1 = module.subnets.subnet[var.tag_name[4]]
+  securitygroup = module.private_rds_sg2.sg_id
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -255,6 +267,8 @@ module "my_team" {
   outputfilepath = var.filepath[6]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  subnet1 = module.subnets.subnet[var.tag_name[4]]
+  securitygroup = module.private_rds_sg2.sg_id
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -267,6 +281,8 @@ module "player_info" {
   outputfilepath = var.filepath[7]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  subnet1 = module.subnets.subnet[var.tag_name[4]]
+  securitygroup = module.private_rds_sg2.sg_id
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -279,6 +295,8 @@ module "create_team" {
   outputfilepath = var.filepath[8]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  subnet1 = module.subnets.subnet[var.tag_name[4]]
+  securitygroup = module.private_rds_sg2.sg_id
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -291,6 +309,8 @@ module "leaderboard" {
   outputfilepath = var.filepath[9]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  subnet1 = module.subnets.subnet[var.tag_name[4]]
+  securitygroup = module.private_rds_sg2.sg_id
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -303,6 +323,8 @@ module "my_contest" {
   outputfilepath = var.filepath[10]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  subnet1 = module.subnets.subnet[var.tag_name[4]]
+  securitygroup = module.private_rds_sg2.sg_id
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -315,6 +337,8 @@ module "players_list" {
   outputfilepath = var.filepath[11]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  subnet1 = module.subnets.subnet[var.tag_name[4]]
+  securitygroup = module.private_rds_sg2.sg_id
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -327,6 +351,8 @@ module "wallet_info" {
   outputfilepath = var.filepath[12]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  subnet1 = module.subnets.subnet[var.tag_name[4]]
+  securitygroup = module.private_rds_sg2.sg_id
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -339,6 +365,8 @@ module "withdraw_cash" {
   outputfilepath = var.filepath[13]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  subnet1 = module.subnets.subnet[var.tag_name[4]]
+  securitygroup = module.private_rds_sg2.sg_id
   //dirname = 
 }
 
