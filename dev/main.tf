@@ -358,7 +358,7 @@ module "krackit11_cognito_pool" {
     require_symbols   = var.require_symbols
     require_uppercase = var.require_uppercase
 
-    tag_name1 =var.tag_name
+    tag_name1 =var.tag_name1
     Environment = var.Environment
   }
 
