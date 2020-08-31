@@ -29,7 +29,7 @@ variable "require_symbols" {
 }
 
 
-variable "tag_name" {
+variable "tag_name1" {
     description = ""
 }
 variable "Environment" {

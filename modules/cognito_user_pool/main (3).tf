@@ -69,7 +69,7 @@ resource "aws_cognito_user_pool" "krackit11pool" {
   }
   
   tags = {
-    Name    = var.tag_name
+    Name    = var.tag_name1
     Environment = var.Environment
   }
 }
